@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC4ECC451C45A0D300D402FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4ECC441C45A0D300D402FB /* main.m */; };
+		FC4ECC481C45A0D300D402FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4ECC471C45A0D300D402FB /* AppDelegate.m */; };
+		FC4ECC4B1C45A0D300D402FB /* FAStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4ECC4A1C45A0D300D402FB /* FAStatsViewController.m */; };
+		FC4ECC4E1C45A0D300D402FB /* FAHistoryDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4ECC4D1C45A0D300D402FB /* FAHistoryDatesViewController.m */; };
+		FC4ECC511C45A0D300D402FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4ECC4F1C45A0D300D402FB /* Main.storyboard */; };
+		FC4ECC531C45A0D300D402FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4ECC521C45A0D300D402FB /* Assets.xcassets */; };
+		FC4ECC561C45A0D300D402FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4ECC541C45A0D300D402FB /* LaunchScreen.storyboard */; };
+		FC4ECC5E1C45A0E100D402FB /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4ECC5D1C45A0E100D402FB /* HealthKit.framework */; };
+		FC4ECC621C45A3CE00D402FB /* FAHealthManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4ECC611C45A3CE00D402FB /* FAHealthManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC4ECC401C45A0D300D402FB /* First Aid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Aid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4ECC441C45A0D300D402FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC4ECC461C45A0D300D402FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC4ECC471C45A0D300D402FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC4ECC491C45A0D300D402FB /* FAStatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAStatsViewController.h; sourceTree = "<group>"; };
+		FC4ECC4A1C45A0D300D402FB /* FAStatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAStatsViewController.m; sourceTree = "<group>"; };
+		FC4ECC4C1C45A0D300D402FB /* FAHistoryDatesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAHistoryDatesViewController.h; sourceTree = "<group>"; };
+		FC4ECC4D1C45A0D300D402FB /* FAHistoryDatesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAHistoryDatesViewController.m; sourceTree = "<group>"; };
+		FC4ECC501C45A0D300D402FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC4ECC521C45A0D300D402FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC4ECC551C45A0D300D402FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC4ECC571C45A0D300D402FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4ECC5D1C45A0E100D402FB /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		FC4ECC5F1C45A0E100D402FB /* First Aid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "First Aid.entitlements"; sourceTree = "<group>"; };
+		FC4ECC601C45A3CE00D402FB /* FAHealthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAHealthManager.h; sourceTree = "<group>"; };
+		FC4ECC611C45A3CE00D402FB /* FAHealthManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAHealthManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC4ECC3D1C45A0D300D402FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4ECC5E1C45A0E100D402FB /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC4ECC371C45A0D200D402FB = {
+			isa = PBXGroup;
+			children = (
+				FC4ECC5D1C45A0E100D402FB /* HealthKit.framework */,
+				FC4ECC421C45A0D300D402FB /* First Aid */,
+				FC4ECC411C45A0D300D402FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC4ECC411C45A0D300D402FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC4ECC401C45A0D300D402FB /* First Aid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC4ECC421C45A0D300D402FB /* First Aid */ = {
+			isa = PBXGroup;
+			children = (
+				FC4ECC5F1C45A0E100D402FB /* First Aid.entitlements */,
+				FC4ECC461C45A0D300D402FB /* AppDelegate.h */,
+				FC4ECC471C45A0D300D402FB /* AppDelegate.m */,
+				FC4ECC491C45A0D300D402FB /* FAStatsViewController.h */,
+				FC4ECC4A1C45A0D300D402FB /* FAStatsViewController.m */,
+				FC4ECC4C1C45A0D300D402FB /* FAHistoryDatesViewController.h */,
+				FC4ECC4D1C45A0D300D402FB /* FAHistoryDatesViewController.m */,
+				FC4ECC4F1C45A0D300D402FB /* Main.storyboard */,
+				FC4ECC521C45A0D300D402FB /* Assets.xcassets */,
+				FC4ECC541C45A0D300D402FB /* LaunchScreen.storyboard */,
+				FC4ECC571C45A0D300D402FB /* Info.plist */,
+				FC4ECC431C45A0D300D402FB /* Supporting Files */,
+				FC4ECC601C45A3CE00D402FB /* FAHealthManager.h */,
+				FC4ECC611C45A3CE00D402FB /* FAHealthManager.m */,
+			);
+			path = "First Aid";
+			sourceTree = "<group>";
+		};
+		FC4ECC431C45A0D300D402FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC4ECC441C45A0D300D402FB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC4ECC3F1C45A0D300D402FB /* First Aid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC4ECC5A1C45A0D300D402FB /* Build configuration list for PBXNativeTarget "First Aid" */;
+			buildPhases = (
+				FC4ECC3C1C45A0D300D402FB /* Sources */,
+				FC4ECC3D1C45A0D300D402FB /* Frameworks */,
+				FC4ECC3E1C45A0D300D402FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "First Aid";
+			productName = "First Aid";
+			productReference = FC4ECC401C45A0D300D402FB /* First Aid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC4ECC381C45A0D200D402FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Willy Co";
+				TargetAttributes = {
+					FC4ECC3F1C45A0D300D402FB = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FNYH7RRK6K;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = FC4ECC3B1C45A0D200D402FB /* Build configuration list for PBXProject "First Aid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC4ECC371C45A0D200D402FB;
+			productRefGroup = FC4ECC411C45A0D300D402FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC4ECC3F1C45A0D300D402FB /* First Aid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC4ECC3E1C45A0D300D402FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4ECC561C45A0D300D402FB /* LaunchScreen.storyboard in Resources */,
+				FC4ECC531C45A0D300D402FB /* Assets.xcassets in Resources */,
+				FC4ECC511C45A0D300D402FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC4ECC3C1C45A0D300D402FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4ECC4E1C45A0D300D402FB /* FAHistoryDatesViewController.m in Sources */,
+				FC4ECC621C45A3CE00D402FB /* FAHealthManager.m in Sources */,
+				FC4ECC481C45A0D300D402FB /* AppDelegate.m in Sources */,
+				FC4ECC4B1C45A0D300D402FB /* FAStatsViewController.m in Sources */,
+				FC4ECC451C45A0D300D402FB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FC4ECC4F1C45A0D300D402FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC4ECC501C45A0D300D402FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC4ECC541C45A0D300D402FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC4ECC551C45A0D300D402FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC4ECC581C45A0D300D402FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FC4ECC591C45A0D300D402FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC4ECC5B1C45A0D300D402FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "First Aid/First Aid.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "First Aid/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.willy.First-Aid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		FC4ECC5C1C45A0D300D402FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "First Aid/First Aid.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "First Aid/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.willy.First-Aid";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC4ECC3B1C45A0D200D402FB /* Build configuration list for PBXProject "First Aid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4ECC581C45A0D300D402FB /* Debug */,
+				FC4ECC591C45A0D300D402FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC4ECC5A1C45A0D300D402FB /* Build configuration list for PBXNativeTarget "First Aid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4ECC5B1C45A0D300D402FB /* Debug */,
+				FC4ECC5C1C45A0D300D402FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC4ECC381C45A0D200D402FB /* Project object */;
+}
