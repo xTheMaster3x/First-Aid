@@ -24,9 +24,10 @@
 @implementation FAStatsViewController
 
 - (NSPredicate *)predicateForSamplesToday {
+    //Restrict HK data to date
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    NSDate *date = _dateToLoad;
+    NSDate *date = _dateToLoad; //Date (if not changed, default is [NSDate date])
     
     NSDate *startDate = [calendar startOfDayForDate:date];
     NSDate *endDate = [calendar dateByAddingUnit:NSCalendarUnitDay value:1 toDate:startDate options:0];
@@ -41,12 +42,14 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if (_dateToLoad == nil) {
-        _dateToLoad = [NSDate date];
+        _dateToLoad = [NSDate date]; //Sets default of date
     }
     [self refreshData];
 }
 
 -(void)refreshData {
+    //Ask HealthKit for data
+    //Active Calories
     HKQuantityType *activeEnergyBurnType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
     [self getQuantativeDataFromTodayForType:activeEnergyBurnType unit:[HKUnit kilocalorieUnit] completion:^(double value, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -54,6 +57,7 @@
         });
     }];
     
+    //Exercise Minutes
     HKQuantityType *exerciseMinutesType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierAppleExerciseTime];
     [self getQuantativeDataFromTodayForType:exerciseMinutesType unit:[HKUnit minuteUnit] completion:^(double value, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -61,12 +65,14 @@
         });
     }];
     
+    //Stand Hours
     [self getStandHoursFromTodayWithCompletion:^(int value, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.hoursStoodLabel.text = [NSString stringWithFormat:@"%d hours", value];
         });
     }];
     
+    //Resting Calories
     HKQuantityType *restingEnergyBurnType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBasalEnergyBurned];
     [self getQuantativeDataFromTodayForType:restingEnergyBurnType unit:[HKUnit kilocalorieUnit] completion:^(double value, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -74,6 +80,7 @@
         });
     }];
     
+    //Steps Taken
     HKQuantityType *stepType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
     [self getQuantativeDataFromTodayForType:stepType unit:[HKUnit countUnit] completion:^(double value, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -81,6 +88,7 @@
         });
     }];
     
+    //Distance Walked
     HKQuantityType *distanceType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
     [self getQuantativeDataFromTodayForType:distanceType unit:[HKUnit mileUnit] completion:^(double value, NSError *error) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -89,6 +97,7 @@
     }];
 }
 
+//Get total of all of today's data for a HKQuantityType
 - (void)getQuantativeDataFromTodayForType:(HKQuantityType *)quantityType unit:(HKUnit *)unit completion:(void (^)(double value, NSError *error))completionHandler {
     FAHealthManager *healthManager = [[FAHealthManager alloc] init];
     NSPredicate *predicate = [self predicateForSamplesToday];
@@ -106,6 +115,7 @@
     [[healthManager healthStore] executeQuery:query];
 }
 
+//Stand hours are an HKCategory Type so they have to be queried a bit differently than the other data types
 - (void)getStandHoursFromTodayWithCompletion:(void (^)(int value, NSError *error))completionHandler {
     FAHealthManager *healthManager = [[FAHealthManager alloc] init];
     NSPredicate *predicate = [self predicateForSamplesToday];

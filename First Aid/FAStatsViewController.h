@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FAStatsViewController : UITableViewController
-@property(nonatomic) NSDate *dateToLoad;
+@property(nonatomic) NSDate *dateToLoad; //Used by FAHistoryDatesViewController to set the date
 @end
 

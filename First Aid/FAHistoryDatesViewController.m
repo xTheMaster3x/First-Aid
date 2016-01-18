@@ -22,6 +22,7 @@
 }
 
 -(NSArray*)datesFromToday {
+    //Days in month up to the current date (probably could be done better)
     NSDate *today = [NSDate date];
     NSCalendar *cal = [NSCalendar currentCalendar];
     
@@ -54,6 +55,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Create table cell
     NSArray *dates = [self datesFromToday];
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -61,6 +63,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    //Displays date in human words
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterFullStyle];
     NSString *dateString = [dateFormatter stringFromDate:[dates objectAtIndex:[dates count] - indexPath.row - 1]];
@@ -71,6 +74,7 @@
 }
 
 -(NSInteger)dayForToday {
+    //Get current date in interger format
     NSDate *currentDate = [NSDate date];
     NSCalendar* calendar = [NSCalendar currentCalendar];
     NSDateComponents* components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:currentDate];
@@ -80,6 +84,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    //Push to statistics view
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterFullStyle];
     

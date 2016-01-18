@@ -13,6 +13,7 @@
     return [[HKHealthStore alloc] init];
 }
 -(void)authorizeHealthKit {
+    //Asks user to authorize HealthKit (all data is 0 otherwise)
     HKQuantityType *activeEnergyBurnType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
     HKQuantityType *exerciseMinutesType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierAppleExerciseTime];
     HKSampleType *standType = [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierAppleStandHour];
@@ -26,7 +27,7 @@
     
     [[self healthStore] requestAuthorizationToShareTypes:nil readTypes:readTypes completion:^(BOOL success, NSError * _Nullable error) {
         if (error == nil && success) {
-            NSLog(@"Success!");
+            NSLog(@"Success! (Maybe)");
             
         }
         else {
