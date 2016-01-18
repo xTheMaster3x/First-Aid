@@ -115,7 +115,7 @@
     [[healthManager healthStore] executeQuery:query];
 }
 
-//Stand hours are an HKCategory Type so they have to be queried a bit differently than the other data types
+//Stand hours are an HKCategoryType so they have to be queried a bit differently than the other data types
 - (void)getStandHoursFromTodayWithCompletion:(void (^)(int value, NSError *error))completionHandler {
     FAHealthManager *healthManager = [[FAHealthManager alloc] init];
     NSPredicate *predicate = [self predicateForSamplesToday];
